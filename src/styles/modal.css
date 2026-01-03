@@ -1,0 +1,124 @@
+/* ===== Overlay ===== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.25s ease-out;
+}
+
+/* ===== Modal Card ===== */
+.modal {
+    background: var(--modal-bg, #ffffff);
+    color: var(--modal-text, #1f2937);
+    width: 100%;
+    max-width: 460px;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+    animation: slideUp 0.3s ease-out;
+}
+
+/* ===== Titles ===== */
+.modal h2 {
+    margin: 0 0 12px;
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.modal p {
+    margin-bottom: 18px;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+/* ===== Inputs ===== */
+.modal input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-size: 0.95rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.modal input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+/* ===== Actions ===== */
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.modal-actions button {
+    padding: 9px 16px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+/* ===== Buttons ===== */
+.modal-actions button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.modal-actions button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Cancel */
+.modal-actions button:first-child {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.modal-actions button:first-child:hover {
+    background: #d1d5db;
+}
+
+/* Primary */
+.modal-actions button:last-child {
+    background: #6366f1;
+    color: white;
+}
+
+.modal-actions button:last-child:hover {
+    background: #4f46e5;
+}
+
+/* ===== Danger Modal ===== */
+.modal.danger h2 {
+    color: #dc2626;
+}
+
+.modal.danger .danger-btn {
+    background: #dc2626;
+}
+
+.modal.danger .danger-btn:hover {
+    background: #b91c1c;
+}
+
+/* ===== Error Text ===== */
+.modal .error {
+    color: #dc2626;
+    font-size: 0.9rem;
+}

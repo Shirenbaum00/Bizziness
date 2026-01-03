@@ -1,0 +1,216 @@
+.business-card {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    margin: 20px;
+    min-width: 300px;
+    max-width: 300px;
+
+}
+
+.business-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
+}
+
+.card-image-wrapper {
+    position: relative;
+    height: 160px;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .25), transparent);
+}
+
+.card-content {
+    padding: 16px 18px 18px;
+}
+
+.card-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.card-description {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+
+.card-divider {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 12px 0;
+}
+
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.info-icon {
+    width: 18px;
+    text-align: center;
+}
+
+
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+
+.action-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 6px;
+    border-radius: 50%;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.action-button:hover {
+    background: #f2f2f2;
+    transform: scale(1.05);
+}
+
+.card-location-link {
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.card-location-link:hover {
+    color: var(--primary);
+}
+
+:any-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+[data-theme="dark"] .business-card .card-location-link:hover {
+    color: #93c5fd !important;
+}
+
+
+.card-location-link {
+    color: inherit;
+
+    text-decoration: none;
+
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+
+.card-location-link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.card-location-link:visited {
+    color: inherit;
+}
+
+/*  DARK MODE – BUSINESS CARD */
+
+[data-theme="dark"] .business-card {
+    background: var(--surface);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .business-card:hover {
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.8);
+}
+
+
+[data-theme="dark"] .card-image-overlay {
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.05));
+}
+
+
+[data-theme="dark"] .card-content {
+    color: var(--text);
+}
+
+[data-theme="dark"] .card-title {
+    color: var(--text);
+}
+
+[data-theme="dark"] .card-description {
+    color: var(--muted);
+}
+
+
+[data-theme="dark"] .card-divider {
+    border-top: 1px solid var(--border);
+}
+
+
+[data-theme="dark"] .info-row {
+    color: var(--muted);
+}
+
+
+[data-theme="dark"] .card-actions button {
+    color: var(--text);
+}
+
+[data-theme="dark"] .card-actions button:hover {
+    background: var(--surface-soft);
+}
+
+
+[data-theme="dark"] .action-button:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+
+[data-theme="dark"] .card-actions button[aria-label="Delete card"] {
+    color: #f87171;
+}
+
+[data-theme="dark"] .card-actions button[aria-label="Delete card"]:hover {
+    background: rgba(248, 113, 113, 0.15);
+}
+
+[data-theme="dark"] .card-actions button[aria-label="Edit card"] {
+    color: #93c5fd;
+}
+
+[data-theme="dark"] .card-actions button[aria-label="Edit card"]:hover {
+    background: rgba(147, 197, 253, 0.15);
+}
+
+[data-theme="dark"] .business-card .card-location-link:hover {
+    color: #93c5fd !important;
+}
